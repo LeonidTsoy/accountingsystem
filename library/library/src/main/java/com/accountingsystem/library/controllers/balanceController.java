@@ -36,13 +36,13 @@ public class balanceController {
     @PostMapping("/balance-create")
     public String createBalance(balance balance){
         balanceService.saveBalance(balance);
-        return "redirect:/balance";
+        return "balance";
     }
 
     @GetMapping("balance-delete/{id}")
     public String deleteBalance(@PathVariable("id") Integer balanceId){
         balanceService.deleteById(balanceId);
-        return "redirect:/balance";
+        return "balance";
     }
 
     @GetMapping("/balance-update/{id}")
@@ -55,6 +55,6 @@ public class balanceController {
     @PostMapping("/balance-update")
     public String updateBalance(balance balance){
         balanceService.saveBalance(balance);
-        return "redirect:/balance";
+        return "balance";
     }
 }

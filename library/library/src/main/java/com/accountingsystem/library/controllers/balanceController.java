@@ -28,7 +28,7 @@ public class balanceController {
         return "balance-list";
     }
 
-    @GetMapping("/user-create")
+    @GetMapping("/balance-create")
     public String createBalanceForm(balance balance){
         return "balance-create";
     }

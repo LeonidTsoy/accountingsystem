@@ -36,13 +36,13 @@ public class transactionsController {
     @PostMapping("/transactions-create")
     public String createTransactions(transactions transactions){
         transactionsService.saveTransactions(transactions);
-        return "redirect:/transactions";
+        return "transactions";
     }
 
     @GetMapping("transactions-delete/{id}")
     public String deleteTransactions(@PathVariable("id") Integer transactionsId){
         transactionsService.deleteById(transactionsId);
-        return "redirect:/transactions";
+        return "transactions";
     }
 
     @GetMapping("/transactions-update/{id}")
@@ -55,6 +55,6 @@ public class transactionsController {
     @PostMapping("/transactions-update")
     public String updateTransactions(transactions transactions){
         transactionsService.saveTransactions(transactions);
-        return "redirect:/transactions";
+        return "transactions";
     }
 }
